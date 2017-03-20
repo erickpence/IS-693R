@@ -431,6 +431,11 @@ rf.10
 
 confusionMatrix(rf.10)
 
+rf.10.prediction <- predict(rf.10, testData)
+rf.10.prediction
+
+confusionMatrix(data = rf.10.prediction, testData$Survived)
+
 
 
 # What does Regression model output look like? Let's try to predict Fare (Decison Tree Regression)
