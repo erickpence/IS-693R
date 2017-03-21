@@ -137,9 +137,11 @@ summary(data.combined[1:891,"Age"])
 # Lot's of NAs...what should we do?
 
 
+# Impute NA values with the median age
+data.combined$Age[is.na(data.combined$Age)] <- median(data.combined$Age, na.rm=TRUE)
 
 
-
+# Maybe we could have been more accurate by using titles?
 
 
 # Move on to the sibsp variable, summarize the variable
