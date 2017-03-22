@@ -191,7 +191,7 @@ temp.parch <- c(train$Parch, test$Parch)
 
 
 
-
+data.combined$Family.Size <- as.factor(temp.sibsp + temp.parch + 1) 
 
 
 View(data.combined)
@@ -344,7 +344,7 @@ varImpPlot(rf.7)
 
 
 
-# Build Random Forest using pclass, sex, age, & family.size
+# Build Random Forest using pclass, sex, age, title & family.size
 rf.model.8 <- data.combined[1:891, c("Pclass", "Sex", "Age", "Title", "Family.Size")]
 
 set.seed(123)
