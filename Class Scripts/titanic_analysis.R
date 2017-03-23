@@ -331,9 +331,6 @@ varImpPlot(rf.6)
 
 
 
-
-
-
 # Build Random Forest using pclass, title, parch, & family.size
 rf.model.7 <- data.combined[1:891, c("Pclass", "Title", "Parch", "Family.Size")]
 
@@ -386,6 +383,8 @@ library(e1071)
 # Create dataset for rows with Survived values
 newTrain <- data.combined[1:891,]
 
+
+set.seed(123)
 
 # Split data 70% train 30% validate
 splitTrain <- createDataPartition(newTrain$Survived, p = .7, list = FALSE)
